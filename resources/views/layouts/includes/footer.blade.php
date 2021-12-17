@@ -39,13 +39,13 @@
 
         //Initialize Select2 Elements
         $('.select2').select2();
-        $('.datepicker').datepicker(
-            {
-                format: "dd-mm-yyyy",
-                autoclose: true,
-
-
-            });
+//        $('.datepicker').datepicker(
+//            {
+//                format: "dd-mm-yyyy",
+//                autoclose: true,
+//
+//
+//            });
         $('.withoutFixedDate').datepicker(
             {
 
@@ -54,7 +54,7 @@
 
             });
 //
-     //  $(".datepicker").datepicker().datepicker("setDate", new Date());
+       $(".datepicker").datepicker().datepicker("setDate", new Date());
 
         $(":selected").css("background-color", "green");
 //        $('.timepicker').timepicker({

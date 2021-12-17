@@ -59,7 +59,7 @@
                     <div class="form-group "><label for="media_title">User Status<span
                                 class="required">*</span></label>
                         <select name="status" id="status" class="form-control">
-                            <option <?php if($user->status=='office-staff') { echo "selected";}  ?> value="office-staff" style="background-color: red;">Office Stuf</option>
+                            <option <?php if($user->status=='admin') { echo "selected";}  ?> value="admin" style="background-color: red;">Admin</option>
                             <option <?php if($user->status=='super-admin') { echo "selected";}  ?> value="super-admin">Super admin</option>
                         </select>
                     </div>

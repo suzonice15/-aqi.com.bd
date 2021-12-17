@@ -165,8 +165,23 @@ class HomeController extends Controller
      $data['student_picture']=$request->student_picture;
      $data['created_at']=date("Y-m-d");
 
-         DB::table('admission')->insert($data);
+        $id= DB::table('admission')->insertGetId($data);
+        
+        $imageName = $id.'_.'.$request->student_picture->extension();
+        $request->student_picture->move(public_path('uploads/users/'), $imageName);
+        $row_data['student_picture']=$imageName;
+        DB::table('admission')->where('id',$id)->update($row_data);
+        if($id){
+            return redirect('/admission/success');
+        }else{
+            return redirect('/admission');
+        }
 
+    }
+
+    public  function admissionSuccess(){
+
+        return view('website.admission_success');
     }
 
 

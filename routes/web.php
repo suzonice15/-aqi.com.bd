@@ -20,6 +20,8 @@ Route::get('/about-us', 'HomeController@about_us');
 Route::post('/contact/save', 'HomeController@contactSave');
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/admission', 'HomeController@admission');
+Route::post('/admission', 'HomeController@admissionStore');
+Route::get('/admission/success', 'HomeController@admissionSuccess');
 
 Route::get('/program-video', 'HomeController@programVideo');
 Route::get('/ajax-program-video', 'HomeController@ajax_program_video');
@@ -125,13 +127,39 @@ Route::get('/admin/gelary/delete/{id}', 'admin\GelaryController@destroy');
 
 
 
-/****=============== media section    =====================  ******/
-Route::get('admin/media', 'admin\MediaController@index');
-Route::get('admin/media/create', 'admin\MediaController@create');
-Route::post('admin/media/store', 'admin\MediaController@store');
-Route::get('/admin/media/delete/{id}', 'admin\MediaController@destroy');
-Route::get('media/pagination', 'admin\MediaController@pagination');
-Route::get('media/pagination/fetch_data', 'admin\MediaController@pagination');
+
+
+/****=============== income expense section    =====================  ******/
+Route::get('admin/income/expense', 'admin\IncomeExpenseController@index');
+Route::get('admin/income/expense/create', 'admin\IncomeExpenseController@create');
+Route::post('admin/income/expense/store', 'admin\IncomeExpenseController@store');
+Route::post('admin/income/expense/update/{id}', 'admin\IncomeExpenseController@update');
+Route::get('admin/income/expense/update/{id}', 'admin\IncomeExpenseController@date_update');
+Route::get('/admin/income/expense/{id}', 'admin\IncomeExpenseController@edit');
+Route::get('/admin/income/expense/delete/{id}', 'admin\IncomeExpenseController@destroy');
+Route::get('/admin/income/profite', 'admin\IncomeExpenseController@profite');
+Route::get('/admin/report', 'admin\IncomeExpenseController@report');
+Route::get('/getCategory', 'admin\IncomeExpenseController@getCategory');
+
+
+/****=============== event section    =====================  ******/
+Route::get('admin/category', 'admin\CategoryController@index');
+Route::get('admin/category/create', 'admin\CategoryController@create');
+Route::post('admin/category/store', 'admin\CategoryController@store');
+Route::post('admin/category/update/{id}', 'admin\CategoryController@update');
+Route::get('admin/category/update/{id}', 'admin\CategoryController@date_update');
+Route::get('/admin/category/{id}', 'admin\CategoryController@edit');
+Route::get('/admin/category/delete/{id}', 'admin\CategoryController@destroy');
+
+
+
+/****=============== admission section    =====================  ******/
+
+Route::get('admin/admission', 'admin\AdmissionController@index');
+Route::get('/admin/admission/delete/{id}', 'admin\AdmissionController@destroy'); 
+Route::get('/admin/admission/{id}', 'admin\AdmissionController@show'); 
+Route::get('/admin/admission/active/{id}', 'admin\AdmissionController@active'); 
+
 
 
 /****=============== media section    =====================  ******/

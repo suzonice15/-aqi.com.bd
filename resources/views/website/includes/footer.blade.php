@@ -1,6 +1,6 @@
 <footer>
-    <div class="gap no-gap">
-        <img class = "vector-bg-footer" src="{{asset('/')}}assets/font_end/images//bg-vector.png" alt="vector-bg" itemprop="image">
+    <div class="gap no-gap" >
+        <img class = "vector-bg-footer" style="position:relative !important;"  >
         <div class="container">
             <div class="footer-data brd-rd20 overlap-220">
                 <div class="footer-data-inr">

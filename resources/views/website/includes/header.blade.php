@@ -72,8 +72,7 @@
                             <ul>
                                 <li><a href="{{url('/')}}" title="" itemprop="url">Home</a></li>
                                 <li><a href="{{url('/program-video')}}" title="" itemprop="url">Video</a></li>
-
-
+                                <li><a href="{{url('/')}}/admission" >Admission</a></li>
                                 <li><a href="{{url('/')}}/about-us" title="" itemprop="url">About Us</a></li>
                                 <li><a href="{{url('/')}}/contact" title="" itemprop="url">Contact</a></li>
                             </ul>
@@ -161,7 +160,7 @@
 
                     <li><a href="{{url('/')}}" title="" itemprop="url">Home</a></li>
                     <li><a href="{{url('/program-video')}}" title="" itemprop="url">Video</a></li>
-
+                    <li><a href="{{url('/')}}/admission" >Admission</a></li>
                     <li><a href="{{url('/')}}/about-us" title="" itemprop="url">About Us</a></li>
                     <li><a href="{{url('/')}}/contact" title="" itemprop="url">Contact</a></li>
                 </ul>

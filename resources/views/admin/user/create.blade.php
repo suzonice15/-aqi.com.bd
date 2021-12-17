@@ -51,17 +51,12 @@
 
                         </div>
 
-                        {{--<div class="form-group "><label for="media_title">User Status<span--}}
-                                    {{--class="required">*</span></label>--}}
-                            {{--<select name="user_status" class="form-control">--}}
-                                {{--<option value="active" style="background-color: red;">Active</option>--}}
-                                {{--<option value="visible">Inactive</option>--}}
-                            {{--</select>--}}
-                        {{--</div>--}}
                         <div class="form-group "><label for="media_title">User Status<span
                                     class="required">*</span></label>
-                            <select name="user_type" class="form-control">
-                                <option value="office-staff" style="background-color: red;">Office Stuf</option>
+                            <select required  name="user_type" class="form-control">
+
+                                <option value="" >---select---</option>
+                                <option value="admin" >Admin</option>
                                 <option value="super-admin">Super admin</option>
                             </select>
                         </div>
